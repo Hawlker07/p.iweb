@@ -1,0 +1,38 @@
+body{
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #ff5e00;
+}
+p {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 50px auto;
+}
+button {
+    background-color: #ff5e00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #e04e00;
+}
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+

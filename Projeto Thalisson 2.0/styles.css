@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+    margin: 0;
+}
+.conteudo-pagina {
+    flex: 1;
+    color: white;
+    padding: 20px;
+}
+header{
+    height: 115px; 
+    padding: 10px 20px;
+    background-color: #444444;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #ff6600;
+}
+a.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+a.nav-link:hover{
+    color: #ff6600;
+    text-decoration: underline;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-right: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+
