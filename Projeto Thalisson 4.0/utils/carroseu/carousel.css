@@ -1,0 +1,261 @@
+.carousel{
+
+    width:95%;
+
+    max-width:1300px;
+
+    height:500px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    transition:opacity .8s ease;
+
+}
+
+.slide.active{
+
+    opacity:1;
+
+    z-index:2;
+
+}
+
+.slide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:zoom 8s linear infinite;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    padding-left:70px;
+
+    background:linear-gradient(to right,
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.3),
+    transparent);
+
+    color:white;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    width:max-content;
+
+    background:#f97316;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+}
+
+.overlay h1{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+    animation:fadeUp .8s;
+
+}
+
+.overlay p{
+
+    font-size:20px;
+
+    width:550px;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+    animation:fadeUp 1.2s;
+
+}
+
+.btn{
+
+    width:max-content;
+
+    background:#f97316;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:8px;
+
+}
+
+.btn:hover{
+
+    background:#de650f;
+
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.2);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    z-index:20;
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+.dots{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    z-index:20;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.5;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.dot.active{
+
+    width:35px;
+
+    border-radius:20px;
+
+    background:#f97316;
+
+    opacity:1;
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

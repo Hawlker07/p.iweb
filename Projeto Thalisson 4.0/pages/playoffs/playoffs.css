@@ -1,0 +1,372 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Oswald',sans-serif;
+    background:#090909;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+
+    height:220px;
+
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url("../images/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    border-bottom:3px solid #d6a541;
+
+}
+
+.banner h1{
+
+    font-size:70px;
+
+    color:#fff;
+
+    text-shadow:
+    0 0 8px #d6a541,
+    0 0 18px #d6a541;
+
+    letter-spacing:3px;
+
+}
+
+.banner p{
+
+    color:#d6a541;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+}
+
+/* ===========================
+   PLAYOFFS
+=========================== */
+
+.playoffs{
+
+    width:95%;
+
+    max-width:1800px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 420px 1fr;
+
+    gap:40px;
+
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+.west h2,
+.east h2{
+
+    text-align:center;
+
+    color:#d6a541;
+
+    margin-bottom:20px;
+
+    font-size:40px;
+
+}
+
+.column h3{
+
+    color:#ccc;
+
+    margin:20px 0;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   CONFRONTOS
+=========================== */
+
+.match{
+
+    margin-bottom:25px;
+
+}
+
+.team{
+
+    background:#151515;
+
+    border:1px solid #444;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px;
+
+    margin:8px 0;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.team:hover{
+
+    transform:translateX(8px);
+
+    background:#1d1d1d;
+
+}
+
+.team img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+}
+
+.team span{
+
+    flex:1;
+
+    font-size:18px;
+
+}
+
+.team b{
+
+    color:#d6a541;
+
+    font-size:24px;
+
+}
+
+.winner{
+
+    border-left:5px solid gold;
+
+}
+
+/* ===========================
+   CENTRO
+=========================== */
+
+.center{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.trophy{
+
+    width:220px;
+
+    animation:glow 2.5s infinite alternate;
+
+}
+
+.final{
+
+    margin-top:25px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.team-final{
+
+    width:170px;
+
+    background:#181818;
+
+    border:2px solid #555;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.team-final img{
+
+    width:90px;
+
+    margin-bottom:10px;
+
+}
+
+.team-final h2{
+
+    margin-bottom:10px;
+
+}
+
+.team-final h1{
+
+    font-size:70px;
+
+    color:white;
+
+}
+
+.champion{
+
+    border:2px solid gold;
+
+    box-shadow:0 0 18px gold;
+
+}
+
+.champion-title{
+
+    margin-top:40px;
+
+    color:#d6a541;
+
+    letter-spacing:2px;
+
+}
+
+.champion-name{
+
+    font-size:52px;
+
+    margin-top:10px;
+
+    color:white;
+
+    text-shadow:0 0 15px gold;
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+@keyframes glow{
+
+    from{
+
+        filter:drop-shadow(0 0 6px gold);
+
+    }
+
+    to{
+
+        filter:drop-shadow(0 0 24px gold);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:1200px){
+
+.playoffs{
+
+grid-template-columns:1fr;
+
+}
+
+.center{
+
+order:-1;
+
+margin-bottom:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.banner h1{
+
+font-size:48px;
+
+}
+
+.banner p{
+
+font-size:18px;
+
+}
+
+.team span{
+
+font-size:15px;
+
+}
+
+.team-final{
+
+width:140px;
+
+}
+
+.team-final h1{
+
+font-size:50px;
+
+}
+
+.champion-name{
+
+font-size:36px;
+
+}
+
+}
