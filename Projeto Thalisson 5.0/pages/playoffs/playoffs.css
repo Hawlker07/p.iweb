@@ -1,0 +1,330 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg:#0c0c0c;
+    --panel:#181818;
+    --line:#8e8e8e;
+    --gold:#D6B44C;
+    --text:#ffffff;
+    --border:#323232;
+
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top,#242424 0%,#111 45%,#070707 100%);
+
+    color:var(--text);
+
+    font-family:Montserrat,sans-serif;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    height:110px;
+
+    border-bottom:1px solid #262626;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.back{
+
+    position:absolute;
+
+    left:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border:2px solid white;
+
+    border-radius:8px;
+
+    padding:12px 18px;
+
+    transition:.25s;
+
+}
+
+.back:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.title{
+
+    text-align:center;
+
+}
+
+.title h2{
+
+    color:#999;
+
+    letter-spacing:6px;
+
+    font-size:22px;
+
+}
+
+.title h1{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    letter-spacing:5px;
+
+    font-size:70px;
+
+    font-weight:400;
+
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.playoff-container{
+
+    width:98%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr
+    300px
+    1fr;
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+/* =====================================================
+   CONFERÊNCIAS
+===================================================== */
+
+.conference{
+
+    display:grid;
+
+    align-items:center;
+
+}
+
+.west{
+
+    grid-template-columns:
+
+    280px
+    220px
+    180px;
+
+    column-gap:55px;
+
+}
+
+.east{
+
+    grid-template-columns:
+
+    180px
+    220px
+    280px;
+
+    column-gap:55px;
+
+}
+
+.conference h3{
+
+    grid-column:1/-1;
+
+    margin-bottom:40px;
+
+    text-align:center;
+
+    letter-spacing:3px;
+
+    font-size:26px;
+
+    color:#d5d5d5;
+
+}
+
+/* =====================================================
+   RODADAS
+===================================================== */
+
+.round{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.round1{
+
+    gap:42px;
+
+}
+
+.round2{
+
+    padding-top:95px;
+
+    gap:190px;
+
+}
+
+.round3{
+
+    justify-content:center;
+
+    padding-top:270px;
+
+}
+
+/* =====================================================
+   CONFRONTOS
+===================================================== */
+
+.series{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    position:relative;
+
+}
+
+.team{
+
+    display:grid;
+
+    grid-template-columns:
+
+    34px
+    42px
+    1fr
+    40px;
+
+    align-items:center;
+
+    height:54px;
+
+    background:var(--panel);
+
+    border:2px solid var(--border);
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.team:hover{
+
+    transform:scale(1.03);
+
+    border-color:white;
+
+}
+
+.seed{
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:#bdbdbd;
+
+}
+
+.team img{
+
+    width:32px;
+
+    height:32px;
+
+    margin:auto;
+
+    object-fit:contain;
+
+}
+
+.name{
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.score{
+
+    text-align:center;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    border-left:1px solid #3d3d3d;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.winner{
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 14px rgba(214,180,76,.18);
+
+}
